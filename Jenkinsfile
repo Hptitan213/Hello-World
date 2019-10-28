@@ -1,9 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('Starting') {
+    stage('Build') {
       steps {
-        echo 'Hello Worlsd'
+          sh 'echo "Hello World"'
+          sh '''
+         echo 'Multiline shell steps works too'
+            ls -lah
+         '''
       }
     }
   }
