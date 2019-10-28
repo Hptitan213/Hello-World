@@ -20,5 +20,11 @@ pipeline {
           echo 'Hello World'
         }
       }
+      stage('') {
+        steps {
+          sh '''s3Upload(file:\'var/lib/jenkins/workspace/static_master/index.html\', bucket:\'s3:jenkinsudacityproject4.s3-website-us-west-1.amazonaws.com\')
+'''
+        }
+      }
     }
   }
